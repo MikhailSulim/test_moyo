@@ -1,0 +1,24 @@
+@import './../../styles/global.scss';
+
+.burger-menu-btn {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border: none;
+  transition: opacity 0.3s ease-in-out;
+
+  & svg {
+    width: 30px;
+    height: 30px;
+    stroke: $mainTextColor;
+    stroke-width: 2px;
+    
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
