@@ -1,0 +1,23 @@
+@import './../../styles/global.scss';
+
+.submit-btn {
+  width: 100%;
+  height: 48px;
+  border-radius: 10px;
+  border: none;
+  color: $blackTextColor;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: $mainTextColor;
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}

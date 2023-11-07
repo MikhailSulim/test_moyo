@@ -1,10 +1,10 @@
 import React from 'react';
 
-import UserLocation from '../UserLocation/UserLocation';
-import SearchInput from '../SearchInput/SearchInput';
-import Logo from '../Logo/Logo';
-import HeaderBtn from '../HeaderBtn/HeaderBtn';
 import BurgerMenu from '../BurgerMenu/BurgerMenu';
+import HeaderBtn from '../HeaderBtn/HeaderBtn';
+import Logo from '../Logo/Logo';
+import SearchInput from '../SearchInput/SearchInput';
+import UserLocation from '../UserLocation/UserLocation';
 
 import './Header.scss';
 
@@ -13,7 +13,7 @@ const Header = () => {
   return (<header className="header">
     <div className='header__left'>
       <BurgerMenu />
-      <Logo />
+      <Logo place={'header'}/>
     </div>
     <div className='header__search'>
       <SearchInput />

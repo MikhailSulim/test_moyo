@@ -2,7 +2,6 @@ import React from 'react';
 
 import './BurgerMenu.scss';
 
-
 const BurgerMenu = () => {
   return (
     <button type='button' className='burger-menu-btn'>

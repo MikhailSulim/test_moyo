@@ -2,7 +2,8 @@
 /* background */
 $mainBGColor: #101113;
 $headerBGColor: #151719;
-$searchInputBGColor: rgba(255, 255, 255, 0.05);
+$inputBGColor: rgba(255, 255, 255, 0.05);
+$iconsSocialBGColor: #1C1D1F;
 
 /* text */
 $mainTextColor: #fff;
@@ -11,3 +12,6 @@ $inactiveTextColor40: rgba(255,255,255,0.4);
 $inactiveTextColor30: rgba(255,255,255,0.3);
 $inactiveTextColor20: rgba(255,255,255,0.2);
 $blackTextColor: #000;
+$activeLinkColor: rgb(14, 169, 19);
+
+$errorColor: #BF4C4C;

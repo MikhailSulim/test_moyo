@@ -5,9 +5,10 @@ import logo from './../../images/logo.png';
 import './Logo.scss';
 
 
-const Logo = () => {
+const Logo = ({ place }) => {
+
   return (
-    <img className='logo logo_header' src={logo} alt='логотип' />
+    <img className={`logo logo_${place}`} src={logo} alt='логотип' />
   );
 };
 
