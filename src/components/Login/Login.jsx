@@ -12,8 +12,8 @@ const Login = () => {
       <Logo place='main'/>
       
       <form className='login__form'>
-        <Input type='email'/>
-        <Input type='password'/>
+        <Input type='email' placeholder='Email'/>
+        <Input type='password' placeholder='Пароль'/>
         <SubmitBtn/>
         <a href='/' className='login__recover'>Забыли пароль?</a>
   

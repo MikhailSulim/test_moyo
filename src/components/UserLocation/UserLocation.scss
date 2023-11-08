@@ -25,3 +25,12 @@
     line-height: normal;
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .user-location {
+    gap: 5px;
+    &__text {
+      font-size: 12px;
+    }
+  }
+}

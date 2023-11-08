@@ -29,3 +29,17 @@
     gap: 50px;
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .header {
+
+    &__left {
+      gap: 15px;
+    }
+
+    &__right {
+      gap: 15px;
+    }
+  }
+  
+}

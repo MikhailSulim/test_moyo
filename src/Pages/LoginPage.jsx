@@ -8,8 +8,8 @@ import './LoginPage.scss';
 const LoginPage = () => {
   return (
     <main className='login-page'>
-      
-      <Login/>
+
+      <Login />
     </main>
   );
 };

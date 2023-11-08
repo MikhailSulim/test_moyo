@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-import BurgerMenu from '../BurgerMenu/BurgerMenu';
+
+import { useWindowWidth } from '../../hooks/useWindowWidth';
+import { MOBILE_SCREEN_WIDTH } from '../../utils/constants';
+import BurgerMenuBtn from '../BurgerMenu/BurgerMenuBtn';
 import HeaderBtn from '../HeaderBtn/HeaderBtn';
 import Logo from '../Logo/Logo';
 import SearchInput from '../SearchInput/SearchInput';
@@ -10,19 +13,31 @@ import './Header.scss';
 
 
 const Header = () => {
-  return (<header className="header">
-    <div className='header__left'>
-      <BurgerMenu />
-      <Logo place={'header'}/>
-    </div>
-    <div className='header__search'>
-      <SearchInput />
-    </div>
-    <div className='header__right'>
-      <HeaderBtn />
-      <UserLocation />
-    </div>
-  </header>);
+  const windowWidth = useWindowWidth();
+  const [mobile, setMobile] = useState(false);
+
+  useEffect(() => {
+    windowWidth > MOBILE_SCREEN_WIDTH ? setMobile(false) : setMobile(true);
+  }, [windowWidth]);
+
+
+  return (
+    <header className="header">
+      <div className='header__left'>
+        <BurgerMenuBtn mobile={mobile} />
+        {!mobile && <Logo place={'header'} />}
+      </div>
+      <div className='header__search'>
+        {!mobile && <SearchInput />}
+        {mobile && <Logo place={'header'} />}
+      </div>
+      <div className='header__right'>
+        <HeaderBtn mobile={mobile} />
+        {!mobile && <UserLocation />}
+      </div>
+    </header>
+
+  );
 };
 
 export default Header;

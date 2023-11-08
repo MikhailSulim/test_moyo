@@ -1,0 +1,20 @@
+import { useState, useEffect, useCallback } from 'react';
+
+export const useWindowWidth = () => {
+  // хук для определения текущей ширины экрана
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  return windowWidth;
+};

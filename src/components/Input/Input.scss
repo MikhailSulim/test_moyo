@@ -15,12 +15,20 @@
   font-weight: 500;
   line-height: 24px; /* 150% */
 
+  &::placeholder {
+    color: $inactiveTextColor30;
+  }
+
   &_email {
   }
 
   &_password {
     font-weight: 800;
     letter-spacing: 2.8px;
+    &::placeholder {
+      font-weight: 500;
+      letter-spacing: normal;
+    }
   }
 
   &_error {

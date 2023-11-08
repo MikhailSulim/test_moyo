@@ -17,6 +17,20 @@
   letter-spacing: 0.7px;
   cursor: pointer;
   transition: opacity 0.3s ease-in-out;
+  text-transform: uppercase;
+
+  &_mobile {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: $headerBtnBGColor;
+    & svg {
+      stroke: $mainTextColor;
+      fill: none;
+      width: 19.8px;
+      height: 19.8px;
+    }
+  }
 
   &:hover {
     opacity: 0.6;
