@@ -1,13 +1,15 @@
-import Header from './components/Header/Header';
-import LoginPage from './Pages/LoginPage';
-import { LOGIN_ERROR_TEXT } from './utils/constants';
+import React from 'react';
+
+import LoginPage from '../../Pages/LoginPage.tsx';
+import { LOGIN_ERROR_TEXT } from '../../utils/constants.ts';
+import Header from '../Header/Header.tsx';
 
 import './App.scss';
 
-function App() {
-  function cbLogin({ email, password }) {
+const App:React.FC = () => {
+  function cbLogin({ email, password }:{email:string; password: string}) {
     // функция-заглушка для имитации неудачного запроса к серверу при авторизации
-    return new Promise((res, rej) => {
+    return new Promise<void>((res, rej) => {
       setTimeout(() => {
         console.log(email, password);
         rej(new Error(LOGIN_ERROR_TEXT));
@@ -16,11 +18,11 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="app">
       <Header />
       <LoginPage onLogin={cbLogin} />
     </div>
   );
-}
+};
 
 export default App;

@@ -1,32 +1,35 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { ChangeEvent, useCallback, useState } from 'react';
 
-import useFormValidate from '../../hooks/useFormValidate';
-import Input from '../Input/Input';
-import Logo from '../Logo/Logo';
-import SocialAuthenticator from '../SocialAuthenticator/SocialAuthenticator';
-import SubmitBtn from '../SubmitBtn/SubmitBtn';
+import useFormValidate from '../../hooks/useFormValidate.ts';
+import Input from '../Input/Input.tsx';
+import Logo from '../Logo/Logo.tsx';
+import SocialAuthenticator from '../SocialAuthenticator/SocialAuthenticator.tsx';
+import SubmitBtn from '../SubmitBtn/SubmitBtn.tsx';
 
 import './Login.scss';
 
-const Login = ({onLogin}) => {
+interface LoginProps {
+  onLogin: (values: any) => Promise<void>;
+}
+
+const Login: React.FC<LoginProps> = ({ onLogin }) => {
   const { values, errors, onChange, resetValidation, isFormValid } = useFormValidate();
-  const [errorLogin, setErrorLogin] = useState('');
-  const [btnText, setBtnText] = useState('войти');
+  const [errorLogin, setErrorLogin] = useState<string>('');
+  const [btnText, setBtnText] = useState<'войти' | 'авторизация...'>('войти');
 
   const onSubmit = useCallback(
-    (e) => {
+    (e: React.FormEvent) => {
       e.preventDefault();
       setErrorLogin('');
       setBtnText('авторизация...');
-      onLogin(values).then().catch(err=>setErrorLogin(err.message)).finally(()=>setBtnText('войти'));
+      onLogin(values)
+        .then()
+        .catch((err) => setErrorLogin(err.message))
+        .finally(() => setBtnText('войти'));
       // resetValidation();
     },
     [values]
   );
-
-  const onClearError = () => {
-    if (errorLogin !== '') setErrorLogin(''); 
-  };
 
   return (
     <div className="login">
@@ -38,8 +41,7 @@ const Login = ({onLogin}) => {
           type="email"
           placeholder="Email"
           isValid={!errors.email}
-          error={errors.email || ''}
-          onChange={onChange}
+          onChange={onChange as (e: ChangeEvent<HTMLInputElement>) => void}
           value={values.email || ''}
           pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
           title="Email должен быть в формате example@example.com"
@@ -50,8 +52,7 @@ const Login = ({onLogin}) => {
           type="password"
           placeholder="Пароль"
           isValid={!errors.password}
-          error={errors.password || ''}
-          onChange={onChange}
+          onChange={onChange as (e: ChangeEvent<HTMLInputElement>) => void}
           value={values.password || ''}
           minLength={8}
           pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*\W).+$"
@@ -60,14 +61,14 @@ const Login = ({onLogin}) => {
 
         {errorLogin !== '' && <span className="login__error">{errorLogin}</span>}
 
-        <SubmitBtn isEnable={isFormValid} onClick={onClearError} btnText={btnText}/>
+        <SubmitBtn isEnable={isFormValid} btnText={btnText} />
 
         <a href="/" className="login__recover">
           Забыли пароль?
         </a>
       </form>
 
-      <SocialAuthenticator/>
+      <SocialAuthenticator />
     </div>
   );
 };

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
-import geoApi from './../../utils/GeoApi';
+import geoApi from '../../utils/GeoApi.ts';
 
 import './UserLocation.scss';
 
-const UserLocation = () => {
-  const [location, setLocation] = useState('Санкт-Петербург');
+const UserLocation:React.FC = () => {
+  const [location, setLocation] = useState<string>('Санкт-Петербург');
 
   useEffect(() => {
     geoApi

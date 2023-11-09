@@ -2,7 +2,7 @@ import React from 'react';
 
 import './SocialAuthenticator.scss';
 
-const SocialAuthenticator = () => {
+const SocialAuthenticator: React.FC = () => {
   return (
     <div className="social-auth">
       <a href="http://vk.com">

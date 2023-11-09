@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react';
-
-import { useWindowWidth } from '../../hooks/useWindowWidth';
+import React from 'react';
 
 import './HeaderBtn.scss';
 
-const HeaderBtn = ({ mobile = false }) => {
+interface HeaderBtnProps {
+  mobile: boolean;
+}
 
+const HeaderBtn: React.FC<HeaderBtnProps> = ({ mobile = false }) => {
   return mobile ? (
     <button type="button" className="header-btn header-btn_mobile">
       <svg>
@@ -13,7 +14,9 @@ const HeaderBtn = ({ mobile = false }) => {
       </svg>
     </button>
   ) : (
-    <button type="button" className="header-btn">войти</button>
+    <button type="button" className="header-btn">
+      войти
+    </button>
   );
 };
 

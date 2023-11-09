@@ -1,17 +1,20 @@
 // Api для получения информации о местоположении пользователя
-import { GEOLOCATION_API_URL } from './constants.js';
+import { GEOLOCATION_API_URL } from './constants.ts';
 
 class GeoApi {
-  constructor({ serverUrl, headers }) {
+  private _serverUrl: string;
+  private _headers: { [key: string]: string };
+
+  constructor({ serverUrl, headers }: { serverUrl: string, headers: { [key: string]: string } }) {
     this._serverUrl = serverUrl;
     this._headers = headers;
   }
 
-  _checkResponse(res) {
+  private _checkResponse(res: Response) {
     return res.ok ? res.json() : Promise.reject(`${res.status} ${res.statusText}`);
   }
 
-  _request(url, options) {
+  private _request(url: string, options: RequestInit) {
     return fetch(url, options).then(this._checkResponse);
   }
 

@@ -1,11 +1,11 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 
-export const useWindowWidth = () => {
+export const useWindowWidth = (): number => {
   // хук для определения текущей ширины экрана
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
 
   useEffect(() => {
-    const handleResize = () => {
+    const handleResize = (): void => {
       setWindowWidth(window.innerWidth);
     };
 
