@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import geoApi from '../../utils/GeoApi.ts';
+import geoApi from '../../utils/GeoApi';
 
 import './UserLocation.scss';
 

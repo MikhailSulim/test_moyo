@@ -4,7 +4,9 @@
 https://www.figma.com/file/x3EMlgPfTzIFf2UJr4kzlG/Moyo-Auth?node-id=0%3A246&mode=dev
 
 ## Функциональность
+
 В тестовом задании реазизовано:
+
     - валидация введённых пользователем данных: 
         email должен соответствовать шаблону email,
         пароль должен быть не менее 8 символов и содержать минимум по одной букве латинского алфавита, цифре и спецсимволу;
@@ -17,4 +19,5 @@ https://www.figma.com/file/x3EMlgPfTzIFf2UJr4kzlG/Moyo-Auth?node-id=0%3A246&mode
    
 
 ## Реализация проекта
+
 https://mikhailsulim.github.io/test_moyo/

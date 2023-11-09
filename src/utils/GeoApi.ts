@@ -1,5 +1,5 @@
 // Api для получения информации о местоположении пользователя
-import { GEOLOCATION_API_URL } from './constants.ts';
+import { GEOLOCATION_API_URL } from './constants';
 
 class GeoApi {
   private _serverUrl: string;

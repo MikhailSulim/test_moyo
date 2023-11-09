@@ -1,8 +1,8 @@
 import React from 'react';
 
-import LoginPage from '../../Pages/LoginPage.tsx';
-import { LOGIN_ERROR_TEXT } from '../../utils/constants.ts';
-import Header from '../Header/Header.tsx';
+import LoginPage from '../../Pages/LoginPage';
+import { LOGIN_ERROR_TEXT } from '../../utils/constants';
+import Header from '../Header/Header';
 
 import './App.scss';
 

@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Login from '../components/Login/Login.tsx';
-import RegisterLink from '../components/RegisterLink/RegisterLink.tsx';
+import Login from '../components/Login/Login';
+import RegisterLink from '../components/RegisterLink/RegisterLink';
 
 import './LoginPage.scss';
 
 interface LoginPageProps {
-  onLogin: (values) => Promise<void>;
+  onLogin: (values: {email: string, password: string}) => Promise<void>;
 }
 
 const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {

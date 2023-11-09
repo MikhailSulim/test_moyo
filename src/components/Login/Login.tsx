@@ -1,10 +1,10 @@
 import React, { ChangeEvent, useCallback, useState } from 'react';
 
-import useFormValidate from '../../hooks/useFormValidate.ts';
-import Input from '../Input/Input.tsx';
-import Logo from '../Logo/Logo.tsx';
-import SocialAuthenticator from '../SocialAuthenticator/SocialAuthenticator.tsx';
-import SubmitBtn from '../SubmitBtn/SubmitBtn.tsx';
+import useFormValidate from '../../hooks/useFormValidate';
+import Input from '../Input/Input';
+import Logo from '../Logo/Logo';
+import SocialAuthenticator from '../SocialAuthenticator/SocialAuthenticator';
+import SubmitBtn from '../SubmitBtn/SubmitBtn';
 
 import './Login.scss';
 

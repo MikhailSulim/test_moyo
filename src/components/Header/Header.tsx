@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
-import { useWindowWidth } from '../../hooks/useWindowWidth.ts';
-import { MOBILE_SCREEN_WIDTH } from '../../utils/constants.ts';
-import BurgerMenuBtn from '../BurgerMenuBtn/BurgerMenuBtn.tsx';
-import HeaderBtn from '../HeaderBtn/HeaderBtn.tsx';
-import Logo from '../Logo/Logo.tsx';
-import SearchInput from '../SearchInput/SearchInput.tsx';
-import UserLocation from '../UserLocation/UserLocation.tsx';
+import { useWindowWidth } from '../../hooks/useWindowWidth';
+import { MOBILE_SCREEN_WIDTH } from '../../utils/constants';
+import BurgerMenuBtn from '../BurgerMenuBtn/BurgerMenuBtn';
+import HeaderBtn from '../HeaderBtn/HeaderBtn';
+import Logo from '../Logo/Logo';
+import SearchInput from '../SearchInput/SearchInput';
+import UserLocation from '../UserLocation/UserLocation';
 
 import './Header.scss';
 
