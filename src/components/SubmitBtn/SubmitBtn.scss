@@ -15,7 +15,11 @@
   text-transform: uppercase;
   cursor: pointer;
   background-color: $mainTextColor;
-  transition: opacity 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  &_disable {
+    cursor: default;
+    background-color: $inactiveTextColor20;
+  }
 
   &:hover {
     opacity: 0.6;

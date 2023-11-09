@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from 'react';
 
-
 import { useWindowWidth } from '../../hooks/useWindowWidth';
 import { MOBILE_SCREEN_WIDTH } from '../../utils/constants';
-import BurgerMenuBtn from '../BurgerMenu/BurgerMenuBtn';
+import BurgerMenuBtn from '../BurgerMenuBtn/BurgerMenuBtn';
 import HeaderBtn from '../HeaderBtn/HeaderBtn';
 import Logo from '../Logo/Logo';
 import SearchInput from '../SearchInput/SearchInput';
 import UserLocation from '../UserLocation/UserLocation';
 
 import './Header.scss';
-
 
 const Header = () => {
   const windowWidth = useWindowWidth();
@@ -36,7 +34,6 @@ const Header = () => {
         {!mobile && <UserLocation />}
       </div>
     </header>
-
   );
 };
 

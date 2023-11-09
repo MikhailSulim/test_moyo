@@ -8,21 +8,20 @@
   margin: 0;
   padding: 0;
   border: none;
-  transition: opacity 0.3s ease-in-out;
 
   & svg {
     width: 30px;
     height: 30px;
     stroke: $mainTextColor;
     stroke-width: 2px;
-  }
-
-  &:hover {
-    opacity: 0.6;
+    transition: stroke 0.3s ease-in-out;
+    &:hover {
+      stroke: $activeLinkColor;
+    }
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $breakpointMobile) {
   .burger-menu-btn svg {
     stroke-width: 1.5px;
   }

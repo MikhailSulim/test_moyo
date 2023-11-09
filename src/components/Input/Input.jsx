@@ -2,9 +2,18 @@ import React from 'react';
 
 import './Input.scss';
 
-const Input = ({type, placeholder}) => {
+const Input = ({ name, type, placeholder, isValid, ...props }) => {
   return (
-    <input type={type} placeholder={placeholder} className={`input input_${type}`}/>
+    <input
+      className={`input input_type_${type} ${!isValid && 'input_error'}`}
+      id={name}
+      name={name}
+      type={type}
+      placeholder={placeholder}
+      required
+      autoComplete='off'
+      {...props}
+    />
   );
 };
 

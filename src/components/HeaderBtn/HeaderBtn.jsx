@@ -4,8 +4,7 @@ import { useWindowWidth } from '../../hooks/useWindowWidth';
 
 import './HeaderBtn.scss';
 
-const HeaderBtn = ({mobile=false}) => {
-  
+const HeaderBtn = ({ mobile = false }) => {
 
   return mobile ? (
     <button type="button" className="header-btn header-btn_mobile">

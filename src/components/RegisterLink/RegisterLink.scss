@@ -1,0 +1,43 @@
+@import './../../styles/global.scss';
+
+.register-link {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 50px;
+  &__text {
+    margin: 0;
+    padding: 0;
+    color: $inactiveTextColor40;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+  }
+
+  &__link {
+    margin: 0;
+    padding: 0;
+    color: $mainTextColor;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: $activeLinkColor;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpointMobile) {
+  .register-link {
+    bottom: 30px;
+  }
+}
