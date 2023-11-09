@@ -9,7 +9,7 @@ const HeaderBtn = ({ mobile = false }) => {
   return mobile ? (
     <button type="button" className="header-btn header-btn_mobile">
       <svg>
-        <use xlinkHref="/sprite.svg#user" />
+        <use xlinkHref="sprite.svg#user" />
       </svg>
     </button>
   ) : (

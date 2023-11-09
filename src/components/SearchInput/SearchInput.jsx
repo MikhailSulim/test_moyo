@@ -8,7 +8,7 @@ const SearchInput = () => {
       <input className='search__input' placeholder='Поиск' />
       <button type='submit' className='search__btn'>
         <svg>
-          <use xlinkHref='/sprite.svg#search' />
+          <use xlinkHref='sprite.svg#search' />
         </svg>
       </button>
     </div>

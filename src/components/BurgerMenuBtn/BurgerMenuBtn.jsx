@@ -6,7 +6,7 @@ const BurgerMenu = () => {
   return (
     <button type='button' className='burger-menu-btn'>
       <svg>
-        <use xlinkHref="/sprite.svg#burger" />
+        <use xlinkHref="sprite.svg#burger" />
       </svg>
     </button>
 

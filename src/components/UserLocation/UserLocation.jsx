@@ -17,7 +17,7 @@ const UserLocation = () => {
   return (
     <div className="user-location">
       <svg>
-        <use xlinkHref="/sprite.svg#place" />
+        <use xlinkHref="sprite.svg#place" />
       </svg>
       <span className='user-location__text'>{location}</span>
     </div>
