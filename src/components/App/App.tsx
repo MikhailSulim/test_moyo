@@ -6,12 +6,12 @@ import Header from '../Header/Header';
 
 import './App.scss';
 
-const App:React.FC = () => {
-  function cbLogin({ email, password }:{email:string; password: string}) {
+const App: React.FC = () => {
+  function cbLogin(values: { [key: string]: string }) {
     // функция-заглушка для имитации неудачного запроса к серверу при авторизации
     return new Promise<void>((res, rej) => {
       setTimeout(() => {
-        console.log(email, password);
+        console.log('Введённые данные: email - ' + values.email, ', password - ' + values.password);
         rej(new Error(LOGIN_ERROR_TEXT));
       }, 2000);
     });

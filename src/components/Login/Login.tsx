@@ -9,7 +9,7 @@ import SubmitBtn from '../SubmitBtn/SubmitBtn';
 import './Login.scss';
 
 interface LoginProps {
-  onLogin: (values: any) => Promise<void>;
+  onLogin: (values: {[key:string]:string}) => Promise<void>;
 }
 
 const Login: React.FC<LoginProps> = ({ onLogin }) => {

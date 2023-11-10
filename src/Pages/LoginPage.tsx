@@ -6,7 +6,7 @@ import RegisterLink from '../components/RegisterLink/RegisterLink';
 import './LoginPage.scss';
 
 interface LoginPageProps {
-  onLogin: (values: {email: string, password: string}) => Promise<void>;
+  onLogin: (values: { [key: string]: string }) => Promise<void>;
 }
 
 const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {

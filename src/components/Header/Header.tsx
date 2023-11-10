@@ -12,7 +12,7 @@ import './Header.scss';
 
 const Header: React.FC = () => {
   const windowWidth = useWindowWidth();
-  const [mobile, setMobile] = useState(false);
+  const [mobile, setMobile] = useState<boolean>(false);
 
   useEffect(() => {
     windowWidth > MOBILE_SCREEN_WIDTH ? setMobile(false) : setMobile(true);

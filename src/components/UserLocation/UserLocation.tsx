@@ -4,7 +4,7 @@ import geoApi from '../../utils/GeoApi';
 
 import './UserLocation.scss';
 
-const UserLocation:React.FC = () => {
+const UserLocation: React.FC = () => {
   const [location, setLocation] = useState<string>('Санкт-Петербург');
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const UserLocation:React.FC = () => {
       <svg>
         <use xlinkHref="sprite.svg#place" />
       </svg>
-      <span className='user-location__text'>{location}</span>
+      <span className="user-location__text">{location}</span>
     </div>
   );
 };
