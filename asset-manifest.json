@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/test_moyo/static/css/main.bea1979f.css",
-    "main.js": "/test_moyo/static/js/main.52771f8c.js",
+    "main.js": "/test_moyo/static/js/main.76181678.js",
     "static/media/Montserrat-ExtraBold.ttf": "/test_moyo/static/media/Montserrat-ExtraBold.6c8b198832c88c649faa.ttf",
     "static/media/Montserrat-SemiBold.ttf": "/test_moyo/static/media/Montserrat-SemiBold.93b37a465fc4ec0d0415.ttf",
     "static/media/Montserrat-Medium.ttf": "/test_moyo/static/media/Montserrat-Medium.b8c6753baa964ccac1ba.ttf",
@@ -10,10 +10,10 @@
     "static/media/Raleway-Regular.ttf": "/test_moyo/static/media/Raleway-Regular.c15b0bf7b86f34335251.ttf",
     "index.html": "/test_moyo/index.html",
     "main.bea1979f.css.map": "/test_moyo/static/css/main.bea1979f.css.map",
-    "main.52771f8c.js.map": "/test_moyo/static/js/main.52771f8c.js.map"
+    "main.76181678.js.map": "/test_moyo/static/js/main.76181678.js.map"
   },
   "entrypoints": [
     "static/css/main.bea1979f.css",
-    "static/js/main.52771f8c.js"
+    "static/js/main.76181678.js"
   ]
 }
